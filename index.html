@@ -1,11 +1,23 @@
-<p><h2>Talking Out Your Problems - The Tech Interview</h2></p>
+---
+layout: default
+---
 
-<p>In the past few days, I have had the pleasure of working with an interviewer who was kind enough to give me a few mock interviews relating to an upcoming interview I hope to be selected for. As one of the core parts of the tech interview is the technical/whiteboard session, I was given plenty of time going over this portion of the experience.</p>
+<div class="home">
 
-<p>First off, your thoughts regarding the problem should be put on mental speaker-phone for the duration of the problem. Let the interviewer hear your rationale for everything you do. Everything you say about why you did a method a certain way or chose a certain algorithm lets the interviewer know that you are constantly thinking, and not just mindlessly throwing out ideas. This methodology doubles down if you become stuck or otherwise believe you've erred somewhere. Talk to the INTERVIEWER (not to yourself!) and understand that you are actually teaching them at this juncture. They are here to learn about you and your methods and experience. The right answer isn't necessarily the most important one - the way you think and approach adversity is far more valuable than being able to build an algorithm to count the number of golf balls in a bus given an hour to code.</p>
+  <h1 class="page-heading">Posts</h1>
 
-<p>That said, mind how you speak out loud. Ask a friend to watch you one day and give you feedback on how you speak. Do you maintain eye contact? Do you talk too slow or too fast? Each oppotunity you find to improve how you communicate in an interview makes you a far more attractive candidate, versus facing the wall for a few hours and coding to yourself. Now, perhaps this isn't the kind of culture fit you seek - perhaps you prefer being in solitude and just focusing on getting your work done. This can easily be averted by asking culture questions during your initial screening interviews!</p>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-<p>The screening interview is often the most wasted opportunity of the entire process. Your potential employers are not the only ones trying to determine if they want to continue the process! This is your chance to ask the interviewer core questions about the company. What is the team you're applying for like? Are they very social, or do they prefer solitude? What about work hours and potential benefits? All of these questions are a chance for you to not only gain a deeper understanding of the company and decide if it's worth your time, but also a chance to build rapport with the interviewer! A candidate who is genuinely interested in the company itself is far more attractive than one who is here solely because there's a job opening.</p>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-<p>That's all for today, keep an eye out for the blog to receive a complete makeover into a full-fledged site, and my next article, which will focus on the importance of the question: "So What?"</p>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
